@@ -1,5 +1,6 @@
 # Application
 web/app/object-cache.php
+web/app/db.php
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
