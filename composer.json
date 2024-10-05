@@ -41,7 +41,18 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-theme/twentytwentyfour": "^1.0",
-    "wpackagist-plugin/redis-cache": "^2.5"
+    "wpackagist-plugin/redis-cache": "^2.5",
+    "wpackagist-plugin/woo-checkout-field-editor-pro": "^2.0",
+    "wpackagist-plugin/contact-form-7": "^5.9",
+    "wpackagist-plugin/contact-form-submissions": "^1.7",
+    "wpackagist-plugin/business-profile": "^2.3",
+    "wpackagist-plugin/fluent-smtp": "^2.2",
+    "wpackagist-plugin/foogallery": "^2.4",
+    "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.20",
+    "wpackagist-plugin/woocommerce-product-addon": "*",
+    "wpackagist-plugin/redirection": "*",
+    "wpackagist-plugin/rename-media-files": "*",
+    "wpackagist-plugin/woocommerce": "^9.3"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
