@@ -1,0 +1,67 @@
+# Lando <https://lando.dev> development environment
+# Usage:
+# `lando start`: To start it up
+# `lando stop`: To stop it and resume latter
+# `lando destroy && rm -rf www-root`: If you want to start again
+# cSpell:ignore appserver lndo portforward hogfrom
+
+name: consueloc
+recipe: wordpress
+
+config:
+  # https://docs.lando.dev/plugins/wordpress/config.html
+  php: "8.2"
+  composer_version: "2"
+  via: "nginx"
+  webroot: web
+  database: "mariadb:11.3"
+  xdebug: true
+
+services:
+  appserver:
+    overrides:
+      environment:
+        COMPOSER_CACHE_DIR: "/app/.cache/composer"
+    sslExpose: false # To avoid port scanning issues at startup https://docs.lando.dev/core/v3/proxy.html#using-https
+    run:
+      - |
+        mkdir -p /app/web/wp
+        composer install
+        sleep 3
+        wp --path=/app/web/wp core install --title="consueloc" --url="https://consueloc.lndo.site" --admin_user=admin --admin_password=password --admin_email=admin@example.com
+        wp --path=/app/web/wp option update siteurl https://consueloc.lando.site
+  redis:
+    type: redis
+  phpmyadmin:
+    type: phpmyadmin:5.0
+    ssl: true
+    sslExpose: false
+    hosts:
+      - database
+  mail:
+    type: mailhog
+    hogfrom:
+      - appserver
+    ssl: true
+    sslExpose: false # To avoid port scanning issues at startup https://docs.lando.dev/core/v3/proxy.html#using-https
+  node:
+    type: node:20
+    run:
+      - npm config set cache /app/.cache/npm
+    command: tail -f /dev/null # Keep it running for faster command execution
+
+proxy:
+  phpmyadmin:
+    - consueloc-pma.lndo.site
+
+  mail:
+    - consueloc-mail.lndo.site
+
+tooling:
+  wp:
+    service: appserver
+    dir: /app/web
+  npm:
+    service: node
+  npx:
+    service: node

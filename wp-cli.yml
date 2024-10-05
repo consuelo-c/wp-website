@@ -1,0 +1,12 @@
+path: web/wp
+server:
+  docroot: web
+
+"@dev":
+  path: /home/master/applications/userid/public_html
+  ssh: "example1.com"
+
+"@prod":
+  path: /home/master/applications/userid/public_html
+  ssh: "example2.com"
+
