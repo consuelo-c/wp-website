@@ -28,6 +28,7 @@ services:
         mkdir -p /app/web/wp
         composer install
         sleep 3
+        wp --path=/app/web/wp core download
         wp --path=/app/web/wp core install --title="consueloc" --url="https://consueloc.lndo.site" --admin_user=admin --admin_password=password --admin_email=admin@example.com
         wp --path=/app/web/wp option update siteurl https://consueloc.lando.site
   redis:
