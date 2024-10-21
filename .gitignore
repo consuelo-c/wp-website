@@ -4,7 +4,7 @@
 /wp-content/*
 !/wp-content/themes/
 /wp-content/themes/*
-!/wp-content/themes/consueloc/
+!/wp-content/themes/consueloc-*/
 /wp-includes/
 /license.txt
 /readme.html
