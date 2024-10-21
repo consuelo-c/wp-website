@@ -12,7 +12,7 @@ DBPASS=$(php -r "echo json_decode(getenv('LANDO_INFO'), true)['database']['creds
 APP_URL=$(php -r "echo json_decode(getenv('LANDO_INFO'), true)['appserver_nginx']['urls'][1];")
 
 # Download and install WordPress.
-wp core download
+wp core download --locale=es_CO --skip-content
 wp config create --dbhost=database --dbname="${DBNAME}" --dbuser="${DBUSER}" --dbpass="${DBPASS}" --extra-php="
 define( 'WP_DEBUG', true );
 define( 'SCRIPT_DEBUG', true );

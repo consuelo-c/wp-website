@@ -48,14 +48,10 @@ services:
 proxy:
   phpmyadmin:
     - consueloc-pma.lndo.site
-
   mail:
     - consueloc-mail.lndo.site
 
 tooling:
-  wp:
-    service: appserver
-    dir: /app/web
   npm:
     service: node
   npx:
