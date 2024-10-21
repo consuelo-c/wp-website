@@ -1,32 +1,26 @@
-# Application
-web/app/object-cache.php
-web/app/db.php
-web/app/plugins/*
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
-web/app/themes/twentytwentyfour/
-web/app/upgrade
-web/app/uploads/*
-!web/app/uploads/.gitkeep
-web/app/cache/*
 
-# WordPress
-web/wp
-web/.htaccess
+# Core
+/wp-admin/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/consueloc/
+/wp-includes/
+/license.txt
+/readme.html
+/*.php
 
-# Logs
+# Log files
 *.log
 
-# Dotenv
-.env
-.env.*
-!.env.example
+# htaccess
+/.htaccess
 
-# Composer
-/vendor
+# Composer Cache
+.cache
 
-# WP-CLI
+# WP-CLI data with remote information
 wp-cli.local.yml
 
-# Cache
-.cache
+# Other
+.DS_Store

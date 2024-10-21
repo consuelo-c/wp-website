@@ -10,11 +10,11 @@ recipe: wordpress
 
 config:
   # https://docs.lando.dev/plugins/wordpress/config.html
-  php: "8.2"
+  php: "8.3"
   composer_version: "2"
   via: "nginx"
-  webroot: web
-  database: "mariadb:11.3"
+  webroot: .
+  database: "mariadb:11.3" # Prevents a Legacy Warning
   xdebug: true
 
 services:
@@ -24,17 +24,11 @@ services:
         COMPOSER_CACHE_DIR: "/app/.cache/composer"
     sslExpose: false # To avoid port scanning issues at startup https://docs.lando.dev/core/v3/proxy.html#using-https
     run:
-      - |
-        mkdir -p /app/web/wp
-        composer install
-        sleep 3
-        wp --path=/app/web/wp core download
-        wp --path=/app/web/wp core install --title="consueloc" --url="https://consueloc.lndo.site" --admin_user=admin --admin_password=password --admin_email=admin@example.com
-        wp --path=/app/web/wp option update siteurl https://consueloc.lando.site
+      - bash /app/bin/lando-wordpress-provision.sh
   redis:
     type: redis
   phpmyadmin:
-    type: phpmyadmin:5.0
+    type: phpmyadmin
     ssl: true
     sslExpose: false
     hosts:

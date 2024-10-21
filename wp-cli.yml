@@ -1,12 +1,11 @@
-path: web/wp
-server:
-  docroot: web
+# Do not modify this file. Instead create a copy with the name wp-cli.local.yml and make
+# your changes there
 
-"@dev":
-  path: /home/master/applications/userid/public_html
-  ssh: "example1.com"
+"@stg":
+  path: /home/master/applications/<application-id>/public_html
+  ssh: example.com
 
 "@prod":
-  path: /home/master/applications/userid/public_html
-  ssh: "example2.com"
+  path: /home/master/applications/<application-id>/public_html
+  ssh: example.com
 
