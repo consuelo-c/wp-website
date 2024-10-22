@@ -21,7 +21,7 @@ done
 for item in $(ls wp-content/themes/ | grep -E -v "dazzet-barebones|genesis"); do
   rm -rf "wp-content/themes/${item}"
 done
-for item in $(ls wp-content/plugins/ | grep -E -v "genesis-title-toggle|genesis-simple-edits|contact-form-submissions|rename-media-files"); do
+for item in $(ls wp-content/plugins/ | grep -E -v "genesis-title-toggle|genesis-simple-edits"); do
   rm -rf "wp-content/plugins/${item}"
 done
 #ls wp-content/themes | egrep -v "consueloc.+" | xargs rm -rf

@@ -18,9 +18,6 @@
 # Log files
 *.log
 
-# htaccess
-/.htaccess
-
 # Composer Cache
 .cache
 

@@ -1,0 +1,3 @@
+# Nothing in this directory should be accessible
+Deny from all
+

@@ -1,0 +1,6 @@
+# Restrict access to README and other files
+<Files "README.md">
+  Order Allow,Deny
+  Deny from all
+</Files>
+
