@@ -10,8 +10,6 @@
 /wp-content/plugins/*
 !/wp-content/plugins/genesis-title-toggle/
 !/wp-content/plugins/genesis-simple-edits/
-!/wp-content/plugins/contact-form-submissions/
-!/wp-content/plugins/rename-media-files/
 /wp-includes/
 /license.txt
 /readme.html

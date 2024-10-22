@@ -3,9 +3,9 @@
 
 "@stg":
   path: /home/master/applications/<application-id>/public_html
-  ssh: example.com
+  ssh: username@clodways-server.com
 
 "@prod":
   path: /home/master/applications/<application-id>/public_html
-  ssh: example.com
+  ssh: username@cloudways-server.com
 
