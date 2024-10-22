@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* Mobile menu */
+.site-header input.top-menu-toggle:checked ~ label.top-menu-toggle:after {
+  content: "";
+  font: 18px FontAwesome; }
+
+.site-header label.top-menu-toggle:after {
+  content: "";
+  font: 18px FontAwesome; }
+
+.site-header ul.menu li.menu-item input.menu-toggle:checked ~ label:after {
+  content: "";
+  font: 14px FontAwesome; }
+
+.site-header ul.menu li.menu-item label.menu-toggle:after {
+  content: "";
+  font: 14px FontAwesome; }
+
+@media (min-width: 768px) {
+  .site-header ul.menu li.menu-item.menu-item-has-children > a:after {
+    content: "";
+    font: 14px FontAwesome; } }
+
+@media (min-width: 768px) {
+  .site-header ul.menu li.menu-item.menu-item-has-children:hover > a:after {
+    content: "";
+    font: 14px FontAwesome; } }

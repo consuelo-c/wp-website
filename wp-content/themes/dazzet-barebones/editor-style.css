@@ -1,0 +1,104 @@
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.pull-right {
+  float: right !important; }
+
+.pull-left {
+  float: left !important; }
+
+.hide {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+.invisible {
+  visibility: hidden; }
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+.hidden {
+  display: none !important; }
+
+.affix {
+  position: fixed; }
+
+.btn.btn-primary {
+  border: 1px solid #337ab7;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px; }
+  .btn.btn-primary.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33333;
+    border-radius: 6px; }
+
+.btn.btn-success {
+  border: 1px solid #5cb85c;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px; }
+  .btn.btn-success.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33333;
+    border-radius: 6px; }
+
+.btn.btn-info {
+  border: 1px solid #5bc0de;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px; }
+  .btn.btn-info.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33333;
+    border-radius: 6px; }
+
+.btn.btn-warning {
+  border: 1px solid #f0ad4e;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px; }
+  .btn.btn-warning.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33333;
+    border-radius: 6px; }
+
+.btn.btn-danger {
+  border: 1px solid #d9534f;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px; }
+  .btn.btn-danger.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33333;
+    border-radius: 6px; }

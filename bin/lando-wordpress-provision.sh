@@ -34,11 +34,28 @@ wp redis enable
 
 # Additional plugins
 PLUGINS="
+better-font-awesome
 woo-checkout-field-editor-pro
+code-snippets
+contact-form-7
+display-posts-shortcode
 business-profile
+fluent-smtp
+foogallery
+genesis-connect-woocommerce
+duracelltomi-google-tag-manager
+malcare-security
+object-cache-pro
+siteorigin-panels
 woocommerce-product-addon
 redirection
-woocommerce"
+shortcodes-ultimate
+simple-cloudflare-turnstile
+custom-css-js
+so-widgets-bundle
+woocommerce
+wordpress-importer
+"
 
 for plugin in ${PLUGINS}; do
   wp plugin install "${plugin}"
