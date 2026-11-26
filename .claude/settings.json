@@ -1,0 +1,112 @@
+{
+	"permissions": {
+		"allow": [
+			"Read",
+			"Edit",
+			"Agent",
+			"SendMessage",
+			"Skill",
+			"PushNotification",
+			"Bash(rg:*)",
+			"Bash(fd:*)",
+			"Bash(npm run test:*)",
+			"Bash(npm run lint:*)",
+			"Bash(npm run typecheck:*)",
+			"Bash(npm run db:generate:*)",
+			"Bash(git status:*)",
+			"Bash(git diff:*)",
+			"Bash(git log:*)",
+			"Bash(git show:*)",
+			"Bash(git fetch:*)",
+			"Bash(git rev-parse:*)",
+			"Bash(git branch --show-current:*)",
+			"Bash(git switch:*)",
+			"Bash(git checkout -b:*)",
+			"Bash(git add:*)",
+			"Bash(git commit:*)",
+			"Bash(git push:*)",
+			"Bash(git stash:*)",
+			"Bash(gh issue:*)",
+			"Bash(gh pr create:*)",
+			"Bash(gh pr view:*)",
+			"Bash(gh pr checks:*)",
+			"Bash(gh pr edit:*)",
+			"Bash(gh run list:*)",
+			"Bash(gh run view:*)",
+			"Bash(gh project item-list:*)",
+			"Bash(git rm:*)",
+			"Bash(curl -sL https://github.com/user-attachments/files/*)",
+			"Bash(rm:*)"
+		],
+		"deny": [
+			"Bash(gh issue delete:*)",
+			"Bash(gh pr merge:*)",
+			"Bash(git push --force:*)",
+			"Bash(git push -f:*)",
+			"Bash(git push * --force*)",
+			"Bash(git push * -f*)",
+			"Bash(git push * main)",
+			"Bash(git push * main*)",
+			"Bash(npm ci:*)",
+			"Bash(npm i:*)",
+			"Bash(npm install:*)",
+			"Bash(npm run db:export:*)",
+			"Bash(npm run db:reset:*)",
+			"Bash(npm run env:create:*)",
+			"Bash(npm run format:*)",
+			"Bash(npm uninstall:*)",
+			"Bash(npx wrangler d1 create:*)",
+			"Bash(npx wrangler d1 execute:*)",
+			"Bash(npx wrangler d1 migrations apply:*)",
+			"Bash(npx wrangler deploy:*)",
+			"Bash(npx wrangler r2 bucket create:*)",
+			"Bash(npx wrangler secret put:*)",
+			"Bash(wrangler d1 create:*)",
+			"Bash(wrangler d1 execute:*)",
+			"Bash(wrangler d1 migrations apply:*)",
+			"Bash(wrangler deploy:*)",
+			"Bash(wrangler r2 bucket create:*)",
+			"Bash(wrangler secret put:*)",
+			"Bash(gh pr close:*)",
+			"Bash(gh issue transfer:*)",
+			"Bash(gh issue comment * --delete-last*)",
+			"Bash(gh pr comment * --delete-last*)",
+			"Bash(git push * --delete*)",
+			"Bash(git push * :*)",
+			"Bash(gh repo delete:*)",
+			"Bash(gh repo archive:*)",
+			"Bash(gh repo rename:*)",
+			"Bash(gh repo edit:*)",
+			"Bash(gh release delete:*)",
+			"Bash(gh label delete:*)",
+			"Bash(gh workflow disable:*)",
+			"Bash(gh secret:*)",
+			"Bash(gh variable:*)",
+			"Edit(/.claude/settings*.json)",
+			"Edit(/.claude/hooks/**)",
+			"Edit(../erp-planning/**)"
+		],
+		"defaultMode": "auto",
+		"additionalDirectories": ["../branding"]
+	},
+	"enabledPlugins": {
+		"ponytail@ponytail": true
+	},
+	"extraKnownMarketplaces": {
+		"ponytail": {
+			"source": {
+				"source": "github",
+				"repo": "DietrichGebert/ponytail"
+			}
+		}
+	},
+	"env": {
+		"PONYTAIL_DEFAULT_MODE": "full"
+	},
+	"hooks": {
+	},
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  }
+}
